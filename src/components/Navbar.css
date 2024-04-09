@@ -1,0 +1,157 @@
+.navbar{
+  background-color: var(--elem-color);
+  padding: 1vh 2.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1vw;
+}
+.navbar a{
+  text-decoration: none;
+}
+
+.logo{
+  font-family: "Roboto", sans-serif;
+  color: var(--txt-color);
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+  cursor: default;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+
+.nav-menu{
+  font-family: "Roboto", sans-serif;
+  /* border: 2px solid blue; */
+  display: flex;
+  padding-right: 3vw;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  list-style: none;
+  font-size: 1.2em;
+  /* position: relative; */
+}
+
+.menu-item{
+  position: relative;
+}
+
+
+.menu-item::after {
+  content: '';
+  height: 0.3vw;
+  width: 100%;
+  background-color: var(--txt-color);
+  position: absolute;
+  left: 0;
+  bottom: -3vh;
+  opacity: 0;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+.menu-item:hover::after{
+  opacity: 1;
+}
+
+
+.nav-menu a{
+  color: var(--txt-color);
+  font-weight: 600;
+  cursor: default;
+  text-decoration: none;
+}
+
+/* nav-menu a:hover{
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+} */
+
+
+.menu-mobile-btn{
+  color: var(--txt-color);
+  font-weight: 600;
+  font-size: 7em;
+  display: none;
+}
+/* .menu-mobile-btn:hover,
+.menu-mobile-btn:active{
+
+} */
+
+.menu-mobile{
+  position: fixed;
+  right: 0;
+  top: 8.4vh;
+  background-color: var(--elem-color);
+  height: 50vh;
+  width: 100%;
+  display: none;
+}
+
+
+.menu-item-mobile{
+  position: relative;
+}
+
+
+.menu-item-mobile::after {
+  content: '';
+  height: 0.3vw;
+  width: 100%;
+  background-color: var(--txt-color);
+  position: absolute;
+  left: 0;
+  bottom: -1vh;
+  opacity: 0;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+.menu-item-mobile:hover::after{
+  opacity: 1;
+}
+
+
+.nav-menu-mobile a{
+  color: var(--txt-color);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: default;
+  font-size: 5vh;
+}
+
+.nav-menu-mobile{
+  padding: 5vh;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+
+/***************** MOBILE-VIEW *****************/
+@media (max-width: 600px){
+  .navbar{
+    padding: 1vh 5vw;
+  }
+  .logo{
+    font-size: 3.5em;
+    /* position: relative; */
+  }
+  
+  .nav-menu{
+    display: none;
+  }
+
+  .menu-mobile-btn{
+    display: block;
+  }
+
+  .menu-mobile{
+    display: block;
+  }
+}
